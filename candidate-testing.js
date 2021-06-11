@@ -25,6 +25,9 @@ candidateName = input.question("What is the candidates name? ");
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
+for (let i = 0; i < questions.length; i++) {
+   console.log(questions[i]);
+}
 
 for (let i = 0; i < questions.length; i++) {
    console.log(questions[i]);
