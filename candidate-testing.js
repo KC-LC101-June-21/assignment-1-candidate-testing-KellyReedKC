@@ -29,21 +29,12 @@ for (let i = 0; i < questions.length; i++) {
    console.log(questions[i]);
 }
 
-for (let i = 0; i < questions.length; i++) {
-   console.log(questions[i]);
 }
-
-}
-
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-if(candidateAnswer === correctAnswer) {
-  console.log("Correct!");
-} else {
-  console.log("Incorrect. Please educate yourself more on womens history.");
-}
+console.log(`The correct answers are: ${correctAnswers}`);
 
   let grade;
   
