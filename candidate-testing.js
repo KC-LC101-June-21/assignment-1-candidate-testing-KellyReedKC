@@ -38,48 +38,49 @@ function gradeQuiz(candidateAnswers) {
 
   let grade = 0
   for (let i = 0; i < questions.length; i++) {
-  
-    if (correctAnswers[i].toLowerCase() === candidateAnswers[0].toLowerCase) {
+
+    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase) {
       grade += 1
     }
   }
 
-    return grade;
-  }
+  return grade;
+}
 
-  function runProgram() {
-    askForName();
-    // TODO 1.1c: Ask for candidate's name //
+function runProgram() {
+  askForName();
+  // TODO 1.1c: Ask for candidate's name //
 
-    // console.log("What's up " + candidateName);//
+  // console.log("What's up " + candidateName);//
 
-    askQuestion();
-   
+  askQuestion();
+
   candidateGrade = gradeQuiz(this.candidateAnswers);
 
-  candidateGrade = candidateGrade/5 * 100
+  candidateGrade = candidateGrade / 5 * 100
 
-console.log(`>>>Overall grade: ${candidateGrade}% (${candidateGrade/100 * 5} of 5 responses correct<<<`);
+  console.log(`>>> Overall grade: ${candidateGrade}% (${candidateGrade / 100 * 5} of 5 responses correct) <<<`);
 
   if (candidateGrade => 80) {
-    console.log(">>>Status: PASSED<<<");}
-  
+    console.log(">>> Status: PASSED <<<");
+  }
+
   else {
-    console.log(">>>Status: FAILED<<<");
+    console.log(">>> Status: FAILED <<<");
   }
 
-  }
+}
 
-  // Don't write any code below this line //
-  // And don't change these or your program will not run as expected //
-  module.exports = {
-    candidateName: candidateName,
-    question: question,
-    correctAnswer: correctAnswer,
-    candidateAnswer: candidateAnswer,
-    questions: questions,
-    correctAnswers: correctAnswers,
-    candidateAnswers: candidateAnswers,
-    gradeQuiz: gradeQuiz,
-    runProgram: runProgram
-  };
+// Don't write any code below this line //
+// And don't change these or your program will not run as expected //
+module.exports = {
+  candidateName: candidateName,
+  question: question,
+  correctAnswer: correctAnswer,
+  candidateAnswer: candidateAnswer,
+  questions: questions,
+  correctAnswers: correctAnswers,
+  candidateAnswers: candidateAnswers,
+  gradeQuiz: gradeQuiz,
+  runProgram: runProgram
+};
