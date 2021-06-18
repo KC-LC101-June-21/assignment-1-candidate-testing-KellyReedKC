@@ -36,11 +36,11 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
 
-  let grade = 0
+  let grade = 0;
   for (let i = 0; i < questions.length; i++) {
 
-    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase) {
-      grade += 1
+    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()) {
+      grade += 1; 
     }
   }
 
@@ -49,19 +49,22 @@ function gradeQuiz(candidateAnswers) {
 
 function runProgram() {
   askForName();
+
   // TODO 1.1c: Ask for candidate's name //
+
 
   // console.log("What's up " + candidateName);//
 
   askQuestion();
 
+
   candidateGrade = gradeQuiz(this.candidateAnswers);
 
-  candidateGrade = candidateGrade / 5 * 100
+  let finalGrade = candidateGrade/5 * 100;  
 
-  console.log(`>>> Overall grade: ${candidateGrade}% (${candidateGrade / 100 * 5} of 5 responses correct) <<<`);
+  console.log(`>>> Overall grade: ${finalGrade}% (${candidateGrade} of 5 responses correct) <<<`);
 
-  if (candidateGrade => 80) {
+  if (finalGrade => 80) {
     console.log(">>> Status: PASSED <<<");
   }
 
