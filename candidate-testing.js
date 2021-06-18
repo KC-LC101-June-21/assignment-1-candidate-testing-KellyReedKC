@@ -64,11 +64,9 @@ function runProgram() {
 
   console.log(`>>> Overall grade: ${finalGrade}% (${candidateGrade} of 5 responses correct) <<<`);
 
-  if (finalGrade => 80) {
+  if (finalGrade >= 80) {
     console.log(">>> Status: PASSED <<<");
-  }
-
-  else {
+  } else {
     console.log(">>> Status: FAILED <<<");
   }
 
